@@ -113,7 +113,7 @@ Just copy the url and paste it into browser and go!
 - Almost done, wait for google to create your new project and you should see the screen below where you can copy your API Key.
 
 ![Picture](http://www.slickremix.com/wp-content/uploads/2015/04/Screen-Shot-2016-08-06-at-4.21.38-PM.png)
-- **Paste the API Key in the Fetch_Contents/youtube_singleReturn.py file**
+- **Copy the API Key (it will be requested by the terminal)**
 
 </details>
 
