@@ -127,9 +127,8 @@ Enter the topic you'd like to look for and press ENTER
 
 ### Results Page
 
-First half of the page To be added
-
-![Picture](https://user-images.githubusercontent.com/53913990/91655294-cdbb4500-eaaf-11ea-86b8-a430dc5b400a.png)
+![Picture](https://user-images.githubusercontent.com/53913990/91800027-8efcca80-ec28-11ea-97aa-490ba8087a68.png)
+![Picture](https://user-images.githubusercontent.com/53913990/91800214-e13deb80-ec28-11ea-9730-9259c812c6d8.png)
 
 ### Of course, sometimes something can go wrong
 
