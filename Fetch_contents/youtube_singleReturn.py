@@ -1,7 +1,9 @@
 from googleapiclient.discovery import build
 
-api_key = #API HERE
-
+try:
+	api_key = input("PASTE YOUR YOUTUBE API HERE: ")
+except:
+	print("Youtube API Key Error. The API key hasn't been entered in yet, isn't correctly formatted as a string, or is invalidated.")
 youtube = build('youtube', 'v3', developerKey= api_key)
 
 def yt_searchtopic(topic, key=api_key, build_yt=youtube):
