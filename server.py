@@ -32,7 +32,7 @@ def index(topic,run):
                 return render_template('index.html',**my_dict)
         except wikipedia.exceptions.DisambiguationError as wikier:
             print(wikier) #in terminal
-            return render_template('wikierror.html', wikier=wikier.options[::11])
+            return render_template('wikierror.html', wikier=wikier.options[:10])
 
     except (IndexError, BrokenPipeError) as e:
         print(e) #in terminal
