@@ -58,7 +58,7 @@ $ flask run
 
 **Windows**
 
-!! open PowerShell as Administrator
+!! open PowerShell as ***Administrator***
 ```PowerShell
 > git clone https://github.com/Shivansh-007/WebSearch.git
 > cd \cloned\repository
