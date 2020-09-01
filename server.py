@@ -1,7 +1,18 @@
-from flask import Flask, request, render_template, redirect, url_for
-from Fetch_contents.main_search_topic import *
-#from Fetch_contents.main_search_topic import *
+# Standard library
 import time
+
+# Third party
+from flask import (
+    Flask,
+    redirect,
+    render_template,
+    request,
+    url_for
+)
+
+# Finally, local modules
+from Fetch_contents.main_search_topic import *
+
 app = Flask(__name__)
 
 
