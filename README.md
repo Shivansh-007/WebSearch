@@ -128,6 +128,7 @@ Enter the topic you'd like to look for and press ENTER
 ### Results Page
 
 ![Picture](https://user-images.githubusercontent.com/53913990/91800027-8efcca80-ec28-11ea-97aa-490ba8087a68.png)
+
 ![Picture](https://user-images.githubusercontent.com/53913990/91800214-e13deb80-ec28-11ea-9730-9259c812c6d8.png)
 
 ### Of course, sometimes something can go wrong
