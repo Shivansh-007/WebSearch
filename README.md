@@ -173,3 +173,5 @@ SOFTWARE.
 - [Wikipedia API](https://pypi.org/project/Wikipedia-API/)  
 - [How to install Youtube API - easy](https://www.youtube.com/watch?v=th5_9woFJmk&t=185s)  
 - [Google News API](https://pypi.org/project/GoogleNews/)
+- [Older Repo Of This Project 1](https://github.com/Shivansh-007/TWT-Code-Jam/graphs/contributors)
+- [Older Repo Of This Project 2](https://github.com/Roshannarma/code_jam/graphs/contributors)
