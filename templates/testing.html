@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+            font-size: 13px;
+            color: #061C37;
+            background: #014D5D url(/static/background.png);
+            background-repeat:repeat-x;
+        }
+        *
+        {
+          margin: 0 auto 0 auto;
+         text-align:left;}
+
+        #page
+        {
+          display: block;
+          height:auto;
+          position: relative;
+          overflow: hidden;
+          width: 670px;
+        }
+
+        .topNaviagationLink
+        {
+            text-align:center;
+            position:relative;
+            margin-top:30px;
+            font-size:16px;
+            margin-left:-10px;
+            width:121px;
+            height: 35px;
+            line-height: 35px;
+            float:left;
+            color:#020a14;
+            font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+        }
+
+
+        .topNaviagationLink a
+        {
+            text-decoration:blink;
+            color:#020a14;
+        }
+
+        .topNaviagationLink a:hover
+        {
+            text-align:center;
+            border-bottom:none;
+            color:#0C61C9;
+            display: block;
+            width:121px;
+            height: 35px;
+            line-height: 35px;
+            background-image:url(/static/tab.png);
+
+        }
+
+        #mainPicture
+        {
+            width:670px;
+            height:345px;
+            background-color:#FFFFFF;
+        }
+
+        #mainPicture
+        {
+            width:670px;
+            height:345px;
+            background-color:#FFFFFF;
+        }
+
+        #mainPicture .picture
+        {
+            position:relative;
+            width:650px;
+            height:325px;
+            top:10px;
+            background-image:url(Fetch_contents/images/image1.jpg);
+            background-repeat:no-repeat;
+            margin-left:10px;
+        }
+
+        #headerTitle
+        {
+            position:relative;
+            top:30px;
+            left:40px;
+            font-size:25px;
+            color:#FFFFFF;
+            font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+        }
+
+        #headerSubtext
+        {
+            position:relative;
+            top:30px;
+            left:50px;
+            font-size:14px;
+            color:#A9C8FA;
+            font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+        }
+
+        .contentBox
+        {
+            width:670px;
+            height:auto;
+            background-color:#FFFFFF;
+            margin-top:10px;
+        }
+
+        .contentBox .innerBox
+        {
+            position:relative;
+            width:650px;
+            height:auto;
+            top:10px;
+            margin-left:10px;
+            background-image:url(/static/content_back.png);
+            background-repeat:repeat-x;
+            padding-bottom:35px;
+        }
+
+        .contentTitle
+        {
+        font-size:30px;
+        margin-bottom:0px;
+        padding-top:18px;
+        margin-left:15px;
+        margin-top:15px;
+        }
+
+        .contentText
+        {
+            font-size:13px;
+            line-height:24px;
+            margin-left:13px;
+            margin-right:13px;
+        }
+
+        #footer {
+
+            width: 670px;
+            height:16px;
+            background: url(/static/footer.png) no-repeat;
+            text-align:center;
+            font-size:9px;
+            font-family:Arial, Helvetica, sans-serif;
+            color:#386172;
+            padding-top:5px;
+        }
+
+        #footer a
+        {
+            text-decoration:none;
+            font-size:30px;
+            color:#386172;
+        }
+
+        #logo
+        {
+          display:block;
+          text-align:center;
+          margin: 0;
+          width = 670px
+          height = 500px
+        }
+
+        html, body {
+          text-align: center;
+        }
+        p {text-align: left;}
+    </style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{topic}}</title>
+
+</head>
+
+<body>
+  <div id = Home>
+    <div id="page">
+        <div class="topNaviagationLink"><a href=#Home> Home </a></div>
+        <div class="topNaviagationLink"><a href="#Dictionary">Dictionary</a></div>
+        <div class="topNaviagationLink"><a href="#Facts">Fun Facts</a></div>
+        <div class="topNaviagationLink"><a href="#Youtube">Youtube Videos</a></div>
+        <div class="topNaviagationLink"><a href="#GoogleNews">News</a></div>
+      </div>
+          <div id="mainPicture">
+              <div class="picture">
+                  <div id="headerTitle">Here are your results!!!</div>
+              </div>
+          </div>
+        <div class="contentBox">
+        <div class="innerBox">
+            <div class="contentTitle" id = Dictionary>Dictionary</div>
+          <div class="contentText"><p>{{definition}}</p></div>
+
+          <div class="contentTitle" id = Facts>Facts</div>
+            <div class = contentText>
+                  <ul>
+                  {% for thing in wikipedia %}
+      <!--               <p> {{thing[0]}} </p>   -->
+                    <p> >{{thing[1]}} </p>
+      <!--               <a href={{thing[1]}}>{{ thing[0] }}</a> -->
+                  {% endfor %}
+                  </ul>
+            </div>
+          </div>
+
+        <div class="contentTitle" id = Youtube>Youtube links</div>
+            <div class="contentText"><p>
+              <ul>
+                {% for thing in youtube %}
+                <a href = {{thing[0]}}>{{thing[1]}}<br></a>
+                {% endfor %}
+              </p>
+            </div>
+        <div class="contentTitle" if = GoogleNews >GoogleNews</div>
+          <div class="contentText"><p>
+                <ul>
+                {% for thing in google_news %}
+                  <a href={{thing[1]}}>{{ thing[0] }}<br></a>
+    <!--              <li>{{ thing[0] }}</li>  -->
+                {% endfor %}
+                </ul>
+            </p></div>
+        </div>
+
+    </div>
+</body>
+</html>

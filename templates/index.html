@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{topic}}</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../static/smalllogo.png" alt="WebSearch" class="logo">
+
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="../static/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop">
+                        <img src="../static/exit.svg" alt="exit menu">
+                    </li>
+                    <li><a href="#DictionarySection">dictionary</a></li>
+                    <li><a href="#FactsSection">wikipedia</a></li>
+                    <li><a href="#SummarySection">summary</a></li>
+                    <li><a href="#GoogleNewsSection">news</a></li>
+                    <li><a href="#YoutubeSection">youtube</a></li>  
+                    <li><a href="#ImageSection">images</a></li>             
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <strong><h1>Welcome to WebSearch</h1></strong>
+            <p class="subhead">Here are your results, powered by WikipediaAPI, GoogleNewsAPI, and much more.</p>
+        </section>
+    </div>
+
+        <!--         
+            <ul1>
+                {% for thing in news %}
+                    <a href={{thing[1]}}>{{thing[:]}}</a>
+                {% endfor %}
+            <ul2>
+                {% for fact in wiki %}
+                    <a href={{fact[1]}}>{{fact[:]}}</a>
+                {% endfor %}
+            <ul3>
+                {% for vid in yt %}
+                    <a href={{vid[1]}}>{{vid[:]}}</a>
+                {% endfor %}   
+            <ul4>
+                {% for img in images %}
+                    <a href={{img[1]}}>{{img[:]}}</a>
+                {% endfor %}
+        -->
+    <main>
+        <div class="main-container">
+            <a name="DictionarySection">
+                <h1> Merriam-Webster Dictionary Definition of: {{topic}}</h2>        
+                  <div class="subhead"><p>{{ definition }}</p></div>
+            <a name="FactsSection">
+                <h1> {{topic}} Facts </h2>
+                    <ol>
+                        {% for thing in wikipedia %}
+                        <!--               <p> {{thing[0]}} </p>   -->
+                                      <p class="subhead"> {{thing[1]}} </p>
+                        <!--               <a href={{thing[1]}}>{{ thing[0] }}</a> -->
+                                    {% endfor %}
+                    </ol>
+            <a name="SummarySection">
+                <h1> Summary: {{topic}}</h2>        
+                  <div class="subhead"><p>{{ summary }}</p></div>
+            <a name="GoogleNewsSection">
+                <h1>  News </h2>
+                    <ol>
+                        {% for thing in google_news %}
+                        <a href={{thing[1]}} class="subhead">{{ thing[0] }}<br><br></a>
+              <!--              <li>{{ thing[0] }}</li>  -->
+                          {% endfor %}
+                    </ol>
+            <a name="YoutubeSection">
+                <h1> YouTube </h2>
+                    <ol>
+                    {% for thing in youtube %}
+                        <iframe width="420" height="315"
+                            src="{{thing[0]}}">
+                        </iframe> 
+                    {% endfor %}
+                    </ol>
+
+            <a name="ImageSection">
+                <h1> Images </h2>
+                <style>
+                    .aligncenter {
+                        text-align: center;
+                        display: inline;
+                        padding: 15px;
+                    }
+                </style>
+                {% for x in range(3) %}
+                <p class="aligncenter">
+                    <a target="_blank" href="{{images[x]}}">
+                        <img class="aligncenter" src="{{images[x]}}" alt="{{topic}}{{x}}" width="400px" height="400px">
+                    </a>
+                </p>
+                {% endfor %}
+        </div>
+    </main>
+
+<!-- 
+
+    <div class="gallery">
+      <a target="_blank" href="../static/smalllogo.png">
+        <img href="{{ax}}" alt="Northern Lights" width="200" height="200">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="../static/smalllogo.png">
+        <img href="{{ax}}" alt="Mountains" width="200" height="200">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+-->
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a href="#">
+                    <img src="../static/smalllogo.png" class="logo" alt="logo">
+                </a>
+                <ul class="footer-links">
+                    <li>Made for TechwithTim's August CodeJam</li>
+                    <li>made by: Sachin, FunkyMonkey, NMarco, wowzers</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<!--
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    } 
+
+    var menu = document.getElementById('menu');
+    var nav = document.getElementById('nav');
+    var exit = document.getElementById('exit');
+
+    menu.addEventListener('click', function(e) {
+        nav.classList.toggle('hide-mobile');
+        e.preventDefault();
+    });
+
+    exit.addEventListener('click', function(e) {
+        nav.classList.add('hide-mobile');
+        e.preventDefault();
+    });
+
+    </script>
+-->
+</body>
+</html>
