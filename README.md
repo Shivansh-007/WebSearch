@@ -47,7 +47,8 @@ $ python3.8 -m venv venv
 Move all the files from the cloned folder to this virtual venv
 
 ```shell
-$ git clone https://github.com/Shivansh-007/TWT-Code-Jam.git
+$ git clone https://github.com/Shivansh-007/WebSearch.git
+$ cd WebSearch
 $ pip install -r requirements.txt
 $ . bin/activate
 $ export FLASK_ENV=development
@@ -59,7 +60,7 @@ $ flask run
 
 !! open PowerShell as Administrator
 ```PowerShell
-> git clone https://github.com/Shivansh-007/TWT-Code-Jam.git
+> git clone https://github.com/Shivansh-007/WebSearch.git
 > cd \cloned\repository
 > Set-ExecutionPolicy Unrestricted -Force
 > py -m pip install -r requirements.txt
