@@ -7,7 +7,7 @@
 
 :star: Star us on GitHub — it helps!
 
-Hi! For TWT's August Code-Jam we were tasked to create a "generator" themed project. Our team, [Sachin](https://github.com/Shivansh-007) , [FunkyMonkey](https://github.com/Roshannarma), [NMarco](https://github.com/marco-create), [wowzers](https://github.com/tshe777), decided to create a website generator. 
+Hi! For TWT's August Code-Jam we were tasked to create a "generator" themed project. Our team, [Shivansh](https://github.com/Shivansh-007) , [FunkyMonkey](https://github.com/Roshannarma), [NMarco](https://github.com/marco-create), [wowzers](https://github.com/tshe777), decided to create a website generator. 
 Our project will ask the user for an input and then return a website on it with a definition, some fun facts on it, Youtube videos, news articles and relevant images. Have Fun!
 
 ##  Contributors
